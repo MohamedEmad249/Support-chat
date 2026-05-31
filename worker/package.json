@@ -1,0 +1,19 @@
+{
+  "name": "support-chat-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev --port 8787",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.106.2",
+    "hono": "^4.3.11"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240524.0",
+    "typescript": "^5.4.5",
+    "wrangler": "^4.95.0"
+  }
+}

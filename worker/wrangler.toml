@@ -1,0 +1,27 @@
+name = "support-chat-worker"
+main = "src/index.ts"
+compatibility_date = "2024-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Set secrets via: wrangler secret put SUPABASE_URL etc.
+# Do NOT commit real values here.
+
+# For local dev, create worker/.dev.vars:
+# SUPABASE_URL=https://xxxx.supabase.co
+# SUPABASE_SERVICE_ROLE_KEY=eyJ...
+# SUPABASE_JWT_SECRET=your-jwt-secret
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
